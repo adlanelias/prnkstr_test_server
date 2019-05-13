@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @master.name %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @master.password_digest %>
+</p>
+
+<p>
+  <strong>Slave:</strong>
+  <%= @master.slave_id %>
+</p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @master.admin %>
+</p>
+
+<%= link_to 'Edit', edit_master_path(@master) %> |
+<%= link_to 'Back', masters_path %>

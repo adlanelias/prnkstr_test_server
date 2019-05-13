@@ -1,0 +1,42 @@
+<%= form_with(model: slafe, local: true) do |form| %>
+  <% if slafe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(slafe.errors.count, "error") %> prohibited this slafe from being saved:</h2>
+
+      <ul>
+      <% slafe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fill_murray %>
+    <%= form.check_box :fill_murray %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place_cage %>
+    <%= form.check_box :place_cage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :custom_header %>
+    <%= form.check_box :custom_header %>
+  </div>
+
+  <div class="field">
+    <%= form.label :custom_header %>
+    <%= form.text_area :custom_header %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

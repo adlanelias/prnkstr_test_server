@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Slaves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fill murray</th>
+      <th>Place cage</th>
+      <th>Custom header</th>
+      <th>Custom header</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slaves.each do |slafe| %>
+      <tr>
+        <td><%= slafe.name %></td>
+        <td><%= slafe.fill_murray %></td>
+        <td><%= slafe.place_cage %></td>
+        <td><%= slafe.custom_header %></td>
+        <td><%= slafe.custom_header %></td>
+        <td><%= link_to 'Show', slafe %></td>
+        <td><%= link_to 'Edit', edit_slafe_path(slafe) %></td>
+        <td><%= link_to 'Destroy', slafe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slafe', new_slafe_path %>
